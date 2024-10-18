@@ -43,7 +43,7 @@
 ### Configuring the plugin 🧐
 
 - After installing the plugin, you should change the default prefix from `addons/swiftly/configs/plugins/shop/core.json` (optional)
-- In order to have items to buy in shop, you need to install modules. Check out [this](https://github.com/swiftly-solution/shop-modules/tree/) list of modules.
+- In order to have items to buy in shop, you need to install modules. Check out [this](https://github.com/swiftly-solution/shop-modules/) list of modules.
 
 ### Shop Exports 🛠️
 
