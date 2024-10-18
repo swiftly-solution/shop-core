@@ -1,0 +1,122 @@
+{
+    "addcreditsmessage": {
+        "en": "Your credits: {GREEN}{EXP}{DEFAULT} [{GREEN}+ {POINTS} for {CASE}{DEFAULT}]",
+        "ro": "Creditele tale: {GREEN}{EXP}{DEFAULT} [{GREEN}+ {POINTS} pentru {CASE}{DEFAULT}]"
+    },
+    "removecreditsmessage": {
+        "en": "Your credits: {LIGHTRED}{EXP}{DEFAULT} [{LIGHTRED}- {POINTS} for {CASE}{DEFAULT}]",
+        "ro": "Creditele tale: {LIGHTRED}{EXP}{DEFAULT} [{LIGHTRED}- {POINTS} pentru {CASE}{DEFAULT}]"
+    },
+    "headshot": {
+        "en": "headshot",
+        "ro": "headshot"
+    },
+    "kill": {
+        "en": "kill",
+        "ro": "ucidere"
+    },
+    "assist": {
+        "en": "assist",
+        "ro": "asist"
+    },
+    "death": {
+        "en": "death",
+        "ro": "moarte"
+    },
+    "noscope": {
+        "en": "noscope",
+        "ro": "noscope"
+    },
+    "credits": {
+        "en": "You're currently having {GREEN}{CREDITS}{DEFAULT} credits.",
+        "ro": "În acest moment deții {GREEN}{CREDITS}{DEFAULT} credite."
+    },
+    "menu.title": {
+        "en": "Shop Menu",
+        "ro": "Meniu Shop"
+    },
+    "already_own": {
+        "en": "You're already owning the following item: {RED}{ITEM}{DEFAULT}.",
+        "ro": "Deja deții următorul item: {RED}{ITEM}{DEFAULT}."
+    },
+    "confirmation_text": {
+        "en": "Are you sure do you want to buy the item specified above for <font color='#{COLOR}'>{CREDITS} credits</font>?",
+        "ro": "Ești sigur că dorești să cumperi item-ul specificat mai sus pentru <font color='#{COLOR}'>{CREDITS} credite</font>?"
+    },
+    "sell_confirmation_text": {
+        "en": "Are you sure do you want to sell the item specified above for <font color='#{COLOR}'>{CREDITS} credits</font>?",
+        "ro": "Ești sigur că dorești să vinzi item-ul specificat mai sus pentru <font color='#{COLOR}'>{CREDITS} credite</font>?"
+    },
+    "menu.yes": {
+        "en": "Yes",
+        "ro": "Da"
+    },
+    "menu.no": {
+        "en": "No",
+        "ro": "Nu"
+    },
+    "no_credits": {
+        "en": "You're not having {RED}{REQUIRED_CREDITS} credits{DEFAULT} to buy this item.",
+        "ro": "Nu ai {RED}{REQUIRED_CREDITS} credite{DEFAULT} pentru a cumpăra acest item."
+    },
+    "succesfully_bought": {
+        "en": "You've succesfully bought {GREEN}{ITEM_NAME}{DEFAULT} for {GREEN}{REQUIRED_CREDITS} credits{DEFAULT}.",
+        "ro": "Ai cumpărat cu succes {GREEN}{ITEM_NAME}{DEFAULT} pentru {GREEN}{REQUIRED_CREDITS} credite{DEFAULT}."
+    },
+    "succesfully_sold": {
+        "en": "You've succesfully sold {GREEN}{ITEM_NAME}{DEFAULT} for {GREEN}{REQUIRED_CREDITS} credits{DEFAULT}.",
+        "ro": "Ai vândut cu succes {GREEN}{ITEM_NAME}{DEFAULT} pentru {GREEN}{REQUIRED_CREDITS} credite{DEFAULT}."
+    },
+    "menu.mainmenu": {
+        "en": "Main Menu",
+        "ro": "Meniu Principal"
+    },
+    "menu.items": {
+        "en": "Items",
+        "ro": "Iteme"
+    },
+    "equip": {
+        "en": "You've succesfully equipped {GREEN}{ITEM}{DEFAULT}.",
+        "ro": "Ai echipat cu succes {GREEN}{ITEM}{DEFAULT}."
+    },
+    "unequip": {
+        "en": "You've succesfully unequipped {GREEN}{ITEM}{DEFAULT}.",
+        "ro": "Ai dezechipat cu succes {GREEN}{ITEM}{DEFAULT}."
+    },
+    "menu.equip": {
+        "en": "Equip",
+        "ro": "Echipează"
+    },
+    "menu.unequip": {
+        "en": "Unequip",
+        "ro": "Dezechipează"
+    },
+    "menu.sell": {
+        "en": "Sell",
+        "ro": "Vinde"
+    },
+    "givecredits.syntax": {
+        "en": "Syntax: !givecredits <user> <amount>",
+        "ro": "Sintaxa: !givecredits <utilizator> <suma>"
+    },
+    "removecredits.syntax": {
+        "en": "Syntax: !removecredits <user> <amount>",
+        "ro": "Sintaxa: !removecredits <utilizator> <suma>"
+    },
+    "nopermissions": {
+        "en": "You don't have permissions to use this command.",
+        "ro": "Nu ai permisiuni pentru a folosi aceasta comanda."
+    },
+    "invalid_player": {
+        "en": "Invalid player.",
+        "ro": "Player invalid."
+    },
+    "gave_credits": {
+        "en": "You gave {CREDITS} credits to {PLAYER_NAME}.",
+        "ro": "Ai dat suma de {CREDITS] credite lui {PLAYER_NAME}."
+    },
+    "removed_credits": {
+        "en": "You removed {CREDITS} credits from {PLAYER_NAME}.",
+        "ro": "Ai scos {CREDITS] credite lui {PLAYER_NAME}."
+    }
+}

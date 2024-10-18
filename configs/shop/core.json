@@ -1,0 +1,12 @@
+{
+    "color": "00a650",
+    "prefix": "[{lime}Swiftly{default}]",
+    "points": {
+        "death": 5,
+        "kill": 10,
+        "headshot": 15,
+        "noscope": 25,
+        "assist": 5
+    },
+    "adminflag": "b"
+}
