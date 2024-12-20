@@ -14,7 +14,17 @@ AddEventHandler("OnPluginStart", function (event)
         }
     })
 
-    db:Query("CREATE TABLE `shop` (`steamid` VARCHAR(64) NOT NULL , `credits` INT NOT NULL , `items` TEXT NOT NULL DEFAULT '[]' , `items_status` TEXT NOT NULL DEFAULT '{}' , UNIQUE (`steamid`)) ENGINE = InnoDB;")
+    db:QueryBuilder():Table("shop"):Create({
+		steamid = "string|max:128|unique",
+		credits = "integer",
+		items = "json|default:[]",
+		items_status = "json|default:{}",
+	}):Execute(function (err, result)
+        if #err > 0 then
+            print("ERROR SHOP: " .. err)
+        end
+    end)
+
 
     for i = 1, playermanager:GetPlayerCap() do
         local player = GetPlayer(i - 1)

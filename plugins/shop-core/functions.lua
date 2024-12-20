@@ -18,24 +18,24 @@ end
 function LoadPlayerData(player)
     if not db:IsConnected() then return end
 
-    local params = { steamid = player:GetSteamID() }
-    db:QueryParams("select * from shop where steamid = '@steamid' limit 1", params,
-        function(err, result)
+    db:QueryBuilder():Table("shop"):Select({}):Where("steamid", "=", tostring(player:GetSteamID())):Limit(1):Execute(function (err, result)
             if #err > 0 then
                 print("ERROR: " .. err)
                 return
             end
 
             if #result > 0 then
+                print("ba asta are credite")
                 player:SetVar("shop.credits", result[1].credits)
                 player:SetVar("shop.items", result[1].items)
                 player:SetVar("shop.items_status", result[1].items_status)
             else
-                db:QueryParams(
-                    "insert ignore into `shop` (credits, steamid) values (@credits, '@steamid')",
-                    params
-                )
-
+                print("ba asta n-are credite")
+                db:QueryBuilder():Table("shop"):Insert({credits = 0, steamid = tostring(player:GetSteamID())}):Execute(function (err, result)
+                    if #err > 0 then
+                        print("ERROR LA INSERARE: " .. err)
+                    end
+                end)
                 player:SetVar("shop.credits", 0)
                 player:SetVar("shop.items", "[]")
                 player:SetVar("shop.items_status", "{}")
@@ -51,14 +51,15 @@ function SavePlayerData(player)
     local params = {
         credits = player:GetVar("shop.credits") or 0,
         items = player:GetVar("shop.items") or "[]",
-        item_status = player:GetVar("shop.items_status") or "{}",
-        steamid = player:GetSteamID()
+        items_status = player:GetVar("shop.items_status") or "{}",
+        steamid = tostring(player:GetSteamID())
     }
 
-    db:QueryParams(
-        "update `shop` set credits = @credits, items = '@items', items_status = '@item_status' where steamid = '@steamid' limit 1",
-        params
-    )
+    db:QueryBuilder():Table("shop"):Update(params):Where("steamid", "=", tostring(player:GetSteamID())):Execute(function (err, result)
+        if #err > 0 then
+            print("SHOP ERROR: " .. err)
+        end
+    end)
 end
 
 --- @param player Player
