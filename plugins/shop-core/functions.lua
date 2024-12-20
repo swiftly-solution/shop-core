@@ -25,12 +25,10 @@ function LoadPlayerData(player)
             end
 
             if #result > 0 then
-                print("ba asta are credite")
                 player:SetVar("shop.credits", result[1].credits)
                 player:SetVar("shop.items", result[1].items)
                 player:SetVar("shop.items_status", result[1].items_status)
             else
-                print("ba asta n-are credite")
                 db:QueryBuilder():Table("shop"):Insert({credits = 0, steamid = tostring(player:GetSteamID())}):Execute(function (err, result)
                     if #err > 0 then
                         print("ERROR LA INSERARE: " .. err)
