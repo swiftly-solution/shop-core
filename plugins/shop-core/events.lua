@@ -16,7 +16,7 @@ AddEventHandler("OnPluginStart", function (event)
 
     db:QueryBuilder():Table("shop"):Create({
 		steamid = "string|max:128|unique",
-		credits = "integer",
+		credits = "integer|default:0",
 		items = "json|default:[]",
 		items_status = "json|default:{}",
 	}):Execute(function (err, result)
@@ -40,11 +40,19 @@ AddEventHandler("OnAllPluginsLoaded", function (event)
     TriggerEvent("shop:core:RegisterItems")
 end)
 
-AddEventHandler("OnClientConnect", function(event, playerid)
+AddEventHandler("OnPostPlayerTeam", function (event)
+    local playerid = event:GetInt("userid")
+    local oldTeam = event:GetInt("oldteam")
+
+    if oldTeam ~= Team.None then
+        return EventResult.Continue
+    end
+
     local player = GetPlayer(playerid)
-    if not player then return end
+    if not player then return EventResult.Continue end
 
     LoadPlayerData(player)
+    return EventResult.Continue
 end)
 
 AddEventHandler("OnClientDisconnect", function(event, playerid)
